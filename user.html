@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login & Sign In</title>
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  </head>
+  <style>
+    * {
+      padding: 0 !important;
+      margin: 0 !important;
+      box-sizing: border-box !important;
+    }
+    :root {
+      --txtcolor: #ff723a;
+    }
+    .logo {
+      width: 5% !important;
+      height: 5% !important;
+    }
+    .btn-color {
+      background-color: var(--txtcolor) !important;
+    }
+    .brand-name {
+      color: var(--txtcolor);
+      font-size: 2.6vw;
+    }
+    .eye-btn {
+      cursor: pointer;
+      position: absolute;
+      top: 11%;
+      right: 3%;
+    }
+    @media (min-width: 250px) and (max-width: 767px) {
+      .logo {
+        width: 10vw !important;
+      }
+      .logo-name {
+        font-size: 1rem !important;
+      }
+    }
+  </style>
+  <body>
+    <header
+      class="container-fluid bg-light py-2 border-bottom border-dark-subtle"
+    >
+      <div
+        class="col-12 d-flex align-items-center justify-content-center gap-2"
+      >
+        <!-- Logo Image -->
+        <img src="assets/images/logo(2).webp" alt="logo" class="logo" />
+        <!-- Brand Name -->
+        <a
+          class="fs-2 brand-name fw-bolder text-decoration-none"
+          href="index.html"
+          >Any Learn</a
+        >
+      </div>
+    </header>
+    <main class="container-fluid">
+      <div class="row justify-content-center my-5">
+        <!-- Sign Up Form -->
+        <form
+          action="#"
+          method="post"
+          class="col-md-6 col-10 border rounded border-dark-subtle p-3 d-none sign-form"
+        >
+          <!-- Name Section -->
+          <div class="d-flex gap-3 my-2">
+            <input
+              type="text"
+              placeholder="First Name"
+              autocomplete="off"
+              name="fname"
+              class="form-control px-2 py-1"
+              required
+            />
+            <input
+              type="text"
+              placeholder="Surname"
+              autocomplete="off"
+              name="sname"
+              class="form-control px-2 py-1"
+              required
+            />
+          </div>
+          <input
+            type="email"
+            placeholder="Enter Email Address"
+            autocomplete="off"
+            name="email"
+            class="form-control px-2 py-1 my-3"
+            required
+          />
+          <div class="position-relative">
+            <input
+              type="password"
+              placeholder="Password"
+              autocomplete="off"
+              name="password"
+              class="form-control px-2 py-1 my-3"
+              id="password-input"
+              required
+            />
+            <span class="eye-btn">
+              <span><i class="fa-regular fa-eye"></i></span>
+            </span>
+          </div>
+          <div class="d-flex justify-content-center">
+            <button
+              type="submit"
+              class="btn btn-color text-white px-2 py-1 w-50 fw-bold"
+            >
+              SIGN UP
+            </button>
+          </div>
+          <hr class="my-3 w-75 mx-auto" />
+          <div class="d-flex justify-content-center">
+            <a
+              href="#"
+              class="btn bg-success-subtle px-3 py-1 fw-bold"
+              id="have-account"
+              >Already Have Account</a
+            >
+          </div>
+        </form>
+        <!-- Login Form -->
+        <form
+          action="#"
+          method="post"
+          class="col-md-6 col-10 border rounded border-dark-subtle p-3 login-form"
+        >
+          <input
+            type="email"
+            name="email"
+            autocomplete="off"
+            required
+            class="form-control px-2 py-1 my-3"
+            placeholder="Email Address"
+          />
+          <div class="position-relative">
+            <input
+              type="password"
+              placeholder="Password"
+              autocomplete="off"
+              name="password"
+              class="form-control px-2 py-1 my-3"
+              id="password-input"
+              required
+            />
+            <span class="eye-btn">
+              <span><i class="fa-regular fa-eye"></i></span>
+            </span>
+          </div>
+          <div class="d-flex justify-content-center">
+            <button
+              type="submit"
+              class="btn btn-color text-white px-2 py-1 w-50 fw-bold"
+            >
+              LOG IN
+            </button>
+          </div>
+          <hr class="my-3 w-75 mx-auto" />
+          <div class="d-flex justify-content-center">
+            <a
+              href="#"
+              class="btn bg-success-subtle px-3 py-1 fw-bold"
+              id="create-account"
+              >Create New Account</a
+            >
+          </div>
+        </form>
+      </div>
+    </main>
+    <script src="assets/js/regis.js"></script>
+  </body>
+</html>
